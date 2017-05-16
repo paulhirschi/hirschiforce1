@@ -1,0 +1,86 @@
+@import "variables-mixins";
+
+* {box-sizing: border-box; transition: visibility 0s, opacity 0.3s linear;}
+
+html,body {height: 100%;}
+
+body {
+  background: $black-pearl;
+  color: $heather;
+  @include copy;
+}
+
+h1 {font-size: 3.998em;}
+h2 {font-size: 2.827em;}
+h3 {font-size: 1.999em;}
+h4 {font-size: 1.414em;}
+h5 {font-size: 1em;}
+h6, .little {font-size: 0.707em;}
+
+h1,h2,h3,h4,h5,h6 {@include title;}
+
+.dark-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(darken($black-pearl, 10%), 0.7);
+  visibility: hidden;
+  opacity: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  h1 {
+    text-transform: uppercase;
+    color: $celestial-blue;
+    margin: 0;
+    span {
+      font-weight: 100;
+    }
+  }
+  p {
+    color: $fiord;
+    transition: transform 0.3s linear;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1)
+    }
+  }
+  .whakakoi-login-img {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+    .close-image {
+      background-color: $fiord;
+      padding: 0.5em;
+      width: 2em;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .the-image {
+      height: 80vh;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  p {
+    text-align: center;
+    color: $fiord;
+    a {
+      color: inherit;
+    }
+  }
+}

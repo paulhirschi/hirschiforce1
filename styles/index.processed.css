@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  transition: visibility 0s, opacity 0.3s linear; }
+
+html, body {
+  height: 100%; }
+
+body {
+  background: #1c2231;
+  color: #b7c1cc;
+  font-family: "Quicksand", sans-serif; }
+
+h1 {
+  font-size: 3.998em; }
+
+h2 {
+  font-size: 2.827em; }
+
+h3 {
+  font-size: 1.999em; }
+
+h4 {
+  font-size: 1.414em; }
+
+h5 {
+  font-size: 1em; }
+
+h6, .little {
+  font-size: 0.707em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800; }
+
+.dark-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(9, 11, 16, 0.7);
+  visibility: hidden;
+  opacity: 0; }
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+  section h1 {
+    text-transform: uppercase;
+    color: #4e9bda;
+    margin: 0; }
+    section h1 span {
+      font-weight: 100; }
+  section p {
+    color: #515961;
+    transition: transform 0.3s linear; }
+    section p:hover {
+      cursor: pointer;
+      transform: scale(1.1); }
+  section .whakakoi-login-img {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0; }
+    section .whakakoi-login-img .close-image {
+      background-color: #515961;
+      padding: 0.5em;
+      width: 2em; }
+      section .whakakoi-login-img .close-image:hover {
+        cursor: pointer; }
+    section .whakakoi-login-img .the-image {
+      height: 80vh; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center; }
+  footer p {
+    text-align: center;
+    color: #515961; }
+    footer p a {
+      color: inherit; }
+
+/*# sourceMappingURL=index.processed.css.map */
