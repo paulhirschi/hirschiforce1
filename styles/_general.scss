@@ -1,11 +1,14 @@
 @import "variables-mixins";
 
-* {box-sizing: border-box; transition: visibility 0s, opacity 0.3s linear;}
+* {box-sizing: border-box;}
 
-html,body {height: 100%;}
+html,body {
+  height: 100%;
+  margin: 0;
+}
 
 body {
-  background: $black-pearl;
+  background-color: $black-pearl;
   color: $heather;
   @include copy;
 }
@@ -28,6 +31,7 @@ h1,h2,h3,h4,h5,h6 {@include title;}
   background-color: rgba(darken($black-pearl, 10%), 0.7);
   visibility: hidden;
   opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 section {
@@ -53,10 +57,19 @@ section {
     }
   }
   .whakakoi-login-img {
-      position: absolute;
-      visibility: hidden;
-      opacity: 0;
+    position: absolute;
+    width: 80%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+    div {
+      display: block;
+      width: auto;
+      max-width: 920px;
+      margin: 0 auto;
+    }
     .close-image {
+      display: block;
       background-color: $fiord;
       padding: 0.5em;
       width: 2em;
@@ -65,7 +78,9 @@ section {
       }
     }
     .the-image {
-      height: 80vh;
+      max-height: 800px;
+      width: 100%;
+      object-fit: contain;
     }
   }
 }

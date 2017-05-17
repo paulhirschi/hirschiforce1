@@ -1,12 +1,12 @@
 * {
-  box-sizing: border-box;
-  transition: visibility 0s, opacity 0.3s linear; }
+  box-sizing: border-box; }
 
 html, body {
-  height: 100%; }
+  height: 100%;
+  margin: 0; }
 
 body {
-  background: #1c2231;
+  background-color: #1c2231;
   color: #b7c1cc;
   font-family: "Quicksand", sans-serif; }
 
@@ -40,7 +40,8 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   background-color: rgba(9, 11, 16, 0.7);
   visibility: hidden;
-  opacity: 0; }
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear; }
 
 section {
   display: flex;
@@ -62,16 +63,26 @@ section {
       transform: scale(1.1); }
   section .whakakoi-login-img {
     position: absolute;
+    width: 80%;
     visibility: hidden;
-    opacity: 0; }
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear; }
+    section .whakakoi-login-img div {
+      display: block;
+      width: auto;
+      max-width: 920px;
+      margin: 0 auto; }
     section .whakakoi-login-img .close-image {
+      display: block;
       background-color: #515961;
       padding: 0.5em;
       width: 2em; }
       section .whakakoi-login-img .close-image:hover {
         cursor: pointer; }
     section .whakakoi-login-img .the-image {
-      height: 80vh; }
+      max-height: 800px;
+      width: 100%;
+      object-fit: contain; }
 
 footer {
   position: absolute;
